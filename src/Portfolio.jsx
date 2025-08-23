@@ -92,15 +92,15 @@ const Portfolio = () => {
       { name: 'React.js', level: 90, color: 'from-blue-500 to-cyan-500' },
       { name: 'Next.js', level: 85, color: 'from-gray-800 to-gray-600' },
       { name: 'JavaScript', level: 88, color: 'from-yellow-500 to-orange-500' },
-      { name: 'Tailwind CSS', level: 92, color: 'from-teal-500 to-green-500' },
-      { name: 'Redux Toolkit', level: 80, color: 'from-purple-500 to-indigo-500' }
+      { name: 'Tailwind CSS', level: 82, color: 'from-teal-500 to-green-500' },
+      { name: 'Redux Toolkit', level: 75, color: 'from-purple-500 to-indigo-500' }
     ],
     backend: [
       { name: 'Node.js', level: 85, color: 'from-green-600 to-lime-600' },
-      { name: 'Express.js', level: 88, color: 'from-gray-700 to-gray-500' },
-      { name: 'MongoDB', level: 83, color: 'from-green-700 to-green-500' },
-      { name: 'MySQL', level: 80, color: 'from-blue-700 to-indigo-700' },
-      { name: 'REST APIs', level: 90, color: 'from-orange-500 to-red-500' }
+      { name: 'Express.js', level: 90, color: 'from-gray-700 to-gray-500' },
+      { name: 'MongoDB', level: 88, color: 'from-green-700 to-green-500' },
+      { name: 'MySQL', level: 70, color: 'from-blue-700 to-indigo-700' },
+      { name: 'REST APIs', level: 80, color: 'from-orange-500 to-red-500' }
     ],
     languages: [
       { name: 'Python', level: 75, color: 'from-blue-500 to-green-500' },
@@ -289,7 +289,7 @@ const Portfolio = () => {
                   <p className="text-lg text-white/80 leading-relaxed">
                     I'm a <span className="text-purple-400 font-semibold">Computer Science Engineering student</span> at Graphic Era Hill University 
                     with a CGPA of <span className="text-pink-400 font-semibold">8.9/10</span>. My journey spans full-stack development, 
-                    machine learning, and competitive programming with <span className="text-purple-400 font-semibold">650+ problems solved</span> 
+                    machine learning, and competitive programming with <span className="text-purple-400 font-semibold">650+ problems solved </span> 
                     across various platforms.
                   </p>
                 </div>
@@ -310,7 +310,7 @@ const Portfolio = () => {
                   { icon: Star, label: '8.9/10', desc: 'CGPA', color: 'from-yellow-500 to-orange-500' },
                   { icon: Code, label: '650+', desc: 'Problems Solved', color: 'from-purple-500 to-pink-500' },
                   { icon: Award, label: '5+', desc: 'Hackathon Finals', color: 'from-green-500 to-teal-500' },
-                  { icon: Zap, label: '3', desc: 'Major Projects', color: 'from-blue-500 to-cyan-500' }
+                  { icon: Zap, label: '7+', desc: 'Major Projects', color: 'from-blue-500 to-cyan-500' }
                 ].map((stat, index) => (
                   <div 
                     key={index}
