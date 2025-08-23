@@ -7,7 +7,6 @@ const Portfolio = () => {
   const [isVisible, setIsVisible] = useState({});
   const [skillLevels, setSkillLevels] = useState({});
 
-  // Mouse tracking for interactive effects
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -16,7 +15,6 @@ const Portfolio = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Intersection Observer for animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,7 +35,6 @@ const Portfolio = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Animate skill bars
   useEffect(() => {
     if (isVisible.skills) {
       setTimeout(() => {
@@ -53,7 +50,6 @@ const Portfolio = () => {
     }
   }, [isVisible.skills]);
 
-  // Smooth scroll to section
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -62,7 +58,6 @@ const Portfolio = () => {
     }
   };
 
-  // Handle contact actions
   const handleEmailClick = () => {
     window.open('mailto:surajsharma60923@gmail.com?subject=Let\'s Connect!&body=Hi Suraj, I\'d like to connect with you!');
   };
@@ -80,16 +75,15 @@ const Portfolio = () => {
   };
 
   const handleResumeDownload = () => {
-    // Convert Google Drive sharing link to direct download link
+
     const fileId = '1sdOv5sv2B4TZpJ0DsuPqNg29dw6Ygzhb';
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
     
-    // Open in new tab for download
+
     window.open(downloadUrl, '_blank');
   };
 
   const handleProjectView = (projectId) => {
-    // In real scenario, you'd navigate to project details or open project URL
     alert(`Would navigate to project ${projectId} details or GitHub repository!`);
   };
 
@@ -155,7 +149,6 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-teal-900/20"></div>
         <div 
@@ -166,7 +159,6 @@ const Portfolio = () => {
             transition: 'all 0.3s ease-out'
           }}
         ></div>
-        {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
@@ -181,7 +173,6 @@ const Portfolio = () => {
         ))}
       </div>
 
-      {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/10 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -213,7 +204,6 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center z-10">
         <div className="text-center space-y-8 max-w-4xl mx-auto px-6">
           <div className={`transform transition-all duration-1000 ${isVisible.hero ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
@@ -245,7 +235,7 @@ const Portfolio = () => {
             </div>
             
             <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
-              Computer Science Engineering student at <span className="text-purple-400 font-semibold">Graphic Era Hill University</span> 
+              Computer Science Engineering student at <span className="text-purple-400 font-semibold">Graphic Era Hill University </span> 
               with expertise in <span className="text-pink-400 font-semibold">MERN Stack</span> and
               <span className="text-blue-400 font-semibold"> Machine Learning</span>. Building scalable web applications 
               and intelligent systems that solve real-world problems.
@@ -645,7 +635,6 @@ const Portfolio = () => {
         </div>
       </footer>
 
-      {/* Cursor follower */}
       <div 
         className="fixed w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full pointer-events-none z-50 mix-blend-screen"
         style={{
