@@ -207,15 +207,8 @@ const Portfolio = () => {
           <div className={`transform transition-all duration-1000 ${isVisible.hero ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <div className="relative inline-block mb-8">
               <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-1 animate-pulse">
-                <div className="relative inline-block mb-8">
                   <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
-  SS
-</div>
-
-
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                  </div>
+                    SS
                 </div>
               </div>
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
