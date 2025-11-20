@@ -74,14 +74,12 @@ const Portfolio = () => {
     window.open('https://www.linkedin.com/in/Suraj-sharma-99ab95270/', '_blank');
   };
 
-  const handleResumeDownload = () => {
+ const handleResumeDownload = () => {
+  const fileId = '1A7SsTNewayHvQDVl3NTtGmw4NCZHCsht';
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
-    const fileId = '1sdOv5sv2B4TZpJ0DsuPqNg29dw6Ygzhb';
-    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-    
-
-    window.open(downloadUrl, '_blank');
-  };
+  window.open(downloadUrl, '_blank');
+};
 
   const handleProjectView = (projectId) => {
     alert(`Would navigate to project ${projectId} details or GitHub repository!`);
@@ -103,10 +101,10 @@ const Portfolio = () => {
       { name: 'REST APIs', level: 80, color: 'from-orange-500 to-red-500' }
     ],
     languages: [
-      { name: 'Python', level: 75, color: 'from-blue-500 to-green-500' },
+      { name: 'Python', level: 70, color: 'from-blue-500 to-green-500' },
       { name: 'Java', level: 90, color: 'from-red-600 to-orange-600' },
       { name: 'C++', level: 85, color: 'from-blue-800 to-purple-800' },
-      { name: 'SQL', level: 78, color: 'from-indigo-600 to-purple-600' },
+      { name: 'SQL', level: 70, color: 'from-indigo-600 to-purple-600' },
       { name: 'TensorFlow', level: 65, color: 'from-orange-500 to-yellow-500' }
     ]
   };
@@ -114,37 +112,37 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "JobVerse - Full-Stack Job Portal",
-      description: "Comprehensive MERN stack job portal with secure authentication, JWT integration, and optimized APIs. Reduced unauthorized access by 30% and API latency by 40%.",
+      title: "JobSphere– University Job Portal(Full-Stack)",
+      description: "Built a role-based job portal with Student, Recruiter, and Admin dashboards, improving workflow efficiency by 45% and Developed community features (posts, comments, feedback) along with structured application flow, boosting platform engagement by 3X",
       image: "bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600",
       tech: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JWT'],
       stats: { auth: 'JWT+OAuth', latency: '-40%', security: '+30%' },
-      date: 'May 2024',
-      github: 'https://github.com/Suraj-Sharma001/jobverse',
-      demo: 'https://job-verse-xi.vercel.app/'
+      date: 'Dec 2025',
+      github: 'https://github.com/Suraj-Sharma001/JobSphere',
+      demo: 'https://jobsphere1.onrender.com/'
     },
     {
       id: 2,
+      title: " WebNova– Custom Web Server in C",
+      description: "Developed a high-performance HTTP server in C supporting GET/POST/PUT requests, Caching, Multithreading and modular request parsing.",
+      image: "bg-gradient-to-br from-orange-600 via-red-600 to-pink-600",
+      tech: ['C', 'Socket Programming', 'Operating Systems', 'Computer Networks'],
+      stats: { retention: '+18%', latency: '-25%', security: '+30%' },
+      date: 'Sept 2025',
+      github: 'https://github.com/Suraj-Sharma001/WebNova',
+      demo: 'https://github.com/Suraj-Sharma001/WebNova'
+    },
+    {
+      id: 3,
       title: "Liveness Detection System",
       description: "Real-time face anti-spoofing system using deep learning with TensorFlow CNNs and YOLOv8. Achieved 95% accuracy with robust data augmentation.",
       image: "bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600",
       tech: ['Python', 'TensorFlow', 'OpenCV', 'YOLOv8', 'CNNs'],
       stats: { accuracy: '95%', dataset: '20K+', realtime: 'Yes' },
-      date: 'Aug 2025',
+      date: 'May 2025',
       github: 'https://github.com/Suraj-Sharma001/Face-Anti-Spoofing-System',
       demo: 'https://github.com/Suraj-Sharma001/Face-Anti-Spoofing-System'
-    },
-    {
-      id: 3,
-      title: "Quick Bite - Food Delivery Platform",
-      description: "Modern food delivery platform with real-time tracking, Redux state management, and optimized performance. Improved user retention by 18%.",
-      image: "bg-gradient-to-br from-orange-600 via-red-600 to-pink-600",
-      tech: ['React.js', 'Redux', 'Socket.IO', 'Node.js', 'MongoDB'],
-      stats: { retention: '+18%', latency: '-25%', realtime: 'Socket.IO' },
-      date: 'Mar 2025',
-      github: 'https://github.com/kartikeywariyal/Tech-Titans',
-      demo: 'https://github.com/kartikeywariyal/Tech-Titans'
-    }
+    }, 
   ];
 
   return (
@@ -209,8 +207,18 @@ const Portfolio = () => {
           <div className={`transform transition-all duration-1000 ${isVisible.hero ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <div className="relative inline-block mb-8">
               <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-1 animate-pulse">
-                <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-6xl font-bold bg-gradient-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  SS
+                <div className="relative inline-block mb-8">
+                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-1 animate-pulse overflow-hidden">
+                    <img
+                      src="src\assets\My_Photo.jpeg"      // replace with actual image
+                      alt="Profile"
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
                 </div>
               </div>
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
@@ -289,7 +297,7 @@ const Portfolio = () => {
                   <p className="text-lg text-white/80 leading-relaxed">
                     I'm a <span className="text-purple-400 font-semibold">Computer Science Engineering student</span> at Graphic Era Hill University 
                     with a CGPA of <span className="text-pink-400 font-semibold">8.9/10</span>. My journey spans full-stack development, 
-                    machine learning, and competitive programming with <span className="text-purple-400 font-semibold">650+ problems solved </span> 
+                    machine learning, and competitive programming with <span className="text-purple-400 font-semibold">700+ problems solved </span> 
                     across various platforms.
                   </p>
                 </div>
@@ -308,9 +316,9 @@ const Portfolio = () => {
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { icon: Star, label: '8.9/10', desc: 'CGPA', color: 'from-yellow-500 to-orange-500' },
-                  { icon: Code, label: '650+', desc: 'Problems Solved', color: 'from-purple-500 to-pink-500' },
+                  { icon: Code, label: '700+', desc: 'Problems Solved', color: 'from-purple-500 to-pink-500' },
                   { icon: Award, label: '5+', desc: 'Hackathon Finals', color: 'from-green-500 to-teal-500' },
-                  { icon: Zap, label: '7+', desc: 'Major Projects', color: 'from-blue-500 to-cyan-500' }
+                  { icon: Zap, label: '8+', desc: 'Major Projects', color: 'from-blue-500 to-cyan-500' }
                 ].map((stat, index) => (
                   <div 
                     key={index}
