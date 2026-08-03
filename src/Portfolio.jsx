@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Github, Instagram, ExternalLink, Calendar, Award, Globe, Code, Zap, Star, ChevronDown, MousePointer, Download, Send } from 'lucide-react';
+import myPhoto from "./assets/My_Photo.jpeg"; // adjust the path
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -209,10 +210,10 @@ const Portfolio = () => {
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 p-1 animate-pulse">
               <div className="w-full h-full rounded-full overflow-hidden bg-black">
                 <img
-                  src="/src/assets/My_Photo.jpeg"
-                  alt="SS"
-                  className="w-full h-full object-cover rounded-full"
-                />
+                src={myPhoto}
+                alt="Suraj Sharma"
+                className="w-full h-full object-cover rounded-full"
+              />
               </div>
             </div>
 
