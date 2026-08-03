@@ -316,7 +316,7 @@ const Portfolio = () => {
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { icon: Star, label: '8.9/10', desc: 'CGPA', color: 'from-yellow-500 to-orange-500' },
-                  { icon: Code, label: '700+', desc: 'Problems Solved', color: 'from-purple-500 to-pink-500' },
+                  { icon: Code, label: '900+', desc: 'Problems Solved', color: 'from-purple-500 to-pink-500' },
                   { icon: Award, label: '5+', desc: 'Hackathon Finals', color: 'from-green-500 to-teal-500' },
                   { icon: Zap, label: '8+', desc: 'Major Projects', color: 'from-blue-500 to-cyan-500' }
                 ].map((stat, index) => (
